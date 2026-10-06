@@ -419,11 +419,46 @@ h3,
   color: rgba(255, 255, 255, 0.75);
 }
 
+/* Shared corner arches (matches amenities-deco--arches) */
+.section-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-deco--arches {
+  width: min(42vw, 360px);
+  height: min(28vw, 240px);
+  opacity: 0.4;
+  background:
+    radial-gradient(ellipse 70% 90% at 30% 0%, transparent 54%, var(--gold) 55%, var(--gold) 56%, transparent 57%),
+    radial-gradient(ellipse 55% 80% at 55% 0%, transparent 54%, var(--gold) 55%, var(--gold) 56%, transparent 57%),
+    radial-gradient(ellipse 40% 70% at 78% 0%, transparent 54%, var(--gold) 55%, var(--gold) 56%, transparent 57%);
+}
+
+.section-deco--tl {
+  top: -0.5rem;
+  left: -1rem;
+}
+
+.section-deco--tr {
+  top: -0.5rem;
+  right: -1rem;
+  transform: scaleX(-1);
+}
+
 /* Story */
 .story {
+  position: relative;
+  overflow: hidden;
   background:
     radial-gradient(50% 40% at 0% 0%, rgba(10, 111, 160, 0.08), transparent 70%),
     var(--paper);
+}
+
+.story > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .story-frame {
@@ -501,7 +536,13 @@ h3,
 
 /* Why */
 #why {
+  position: relative;
   overflow: clip;
+}
+
+#why > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .pillar-item {
@@ -894,7 +935,8 @@ h3,
     opacity: 0.22;
   }
 
-  .amenities-deco--arches {
+  .amenities-deco--arches,
+  .section-deco--arches {
     width: 240px;
     height: 160px;
     opacity: 0.35;
@@ -925,6 +967,12 @@ h3,
     linear-gradient(120deg, rgba(10, 111, 160, 0.92), rgba(6, 36, 52, 0.88)),
     url("../assets/cam-bird-eye.jpg") center/cover no-repeat;
   color: #fff;
+}
+
+.craft-container {
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .craft .eyebrow {
@@ -962,17 +1010,30 @@ h3,
 }
 
 .craft-visual {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
   border-radius: 1.4rem;
   overflow: hidden;
-  min-height: 100%;
   box-shadow: var(--shadow);
+  background: #f3efe6;
+  cursor: zoom-in;
+  text-align: left;
 }
 
 .craft-visual img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 420px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .craft-visual {
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 /* Gallery */
