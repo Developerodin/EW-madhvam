@@ -89,7 +89,7 @@ h3,
   position: absolute;
   width: min(48vw, 420px);
   height: min(48vw, 420px);
-  background: url("../assets/pattern-top-left.png") no-repeat top left / contain;
+  background: url("../assets/pattern-top-left.webp") no-repeat top left / contain;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
@@ -673,7 +673,7 @@ h3,
   width: min(18vw, 160px);
   height: min(18vw, 160px);
   opacity: 0.35;
-  background: url("../assets/pattern-top-left.png") no-repeat center / contain;
+  background: url("../assets/pattern-top-left.webp") no-repeat center / contain;
   filter: sepia(1) saturate(3) hue-rotate(5deg) brightness(1.15);
 }
 
@@ -965,7 +965,7 @@ h3,
 .craft {
   background:
     linear-gradient(120deg, rgba(10, 111, 160, 0.92), rgba(6, 36, 52, 0.88)),
-    url("../assets/cam-bird-eye.jpg") center/cover no-repeat;
+    url("../assets/cam-bird-eye.webp") center/cover no-repeat;
   color: #fff;
 }
 
