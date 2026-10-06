@@ -1,0 +1,19 @@
+# Madhavam by Earth Waves Developers
+
+> Earth Waves Developers presents Madhavam at Bhowapur, Rajnagar Extension, Ghaziabad — residential homes planned around landscaped outdoor living and indoor amenities for families. The production domain is not live yet; replace YOUR-DOMAIN.com with the canonical origin before launch.
+
+Earthwaves Developers Pvt Ltd. Site and office: Khasra No.385 & 386, 5 No. Bhatta Road, Bhowapur, Rajnagar Extension, Ghaziabad, U.P. Sales: sales@earthwavesdevelopers.com. GSTIN 09AADCE7736P1ZX. The public phone number on the site is still a placeholder.
+
+## Pages
+
+- [Home](https://YOUR-DOMAIN.com/): Landing page — "Building Homes. Creating Communities."
+- [About](https://YOUR-DOMAIN.com/#story): Homes planned around how families actually live, at Bhowapur, Rajnagar Extension.
+- [Amenities](https://YOUR-DOMAIN.com/#amenities): Outdoor lawns, jogging track, kids play, badminton, cricket net, yoga lawn, pet park; indoor hall (100 people), gym, yoga and zumba, indoor games, toddler play.
+- [Quality](https://YOUR-DOMAIN.com/#quality): Premium materials, engineering standards, staged construction checks, and handover inspection.
+- [Gallery](https://YOUR-DOMAIN.com/#gallery): Drawings, entry gate, and sales office images.
+- [Contact](https://YOUR-DOMAIN.com/#contact): Site visit and enquiry — sales@earthwavesdevelopers.com.
+
+## Optional
+
+- [Sitemap](https://YOUR-DOMAIN.com/sitemap.xml): Indexable URLs for search crawlers.
+- [Robots](https://YOUR-DOMAIN.com/robots.txt): Crawl policy; all public content is allowed.
