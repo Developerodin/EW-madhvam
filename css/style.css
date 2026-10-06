@@ -60,7 +60,8 @@ h3,
   color: var(--gold);
 }
 
-.eyebrow::before {
+.eyebrow::before,
+.eyebrow::after {
   content: "";
   width: 28px;
   height: 1px;
@@ -140,6 +141,34 @@ h3,
 .section-title {
   font-size: clamp(2.1rem, 4vw, 3.6rem);
   margin: 0.4rem 0 1rem;
+}
+
+/* Centered section intros */
+#why > .container > .row:first-child,
+#amenities > .container > .row:first-child,
+#gallery > .container > .row:first-child,
+#contact > .container > .row:first-child {
+  text-align: center;
+}
+
+#why > .container > .row:first-child > [class*="col"],
+#amenities > .container > .row:first-child > [class*="col"],
+#gallery > .container > .row:first-child > [class*="col"],
+#contact > .container > .row:first-child > [class*="col"] {
+  margin-inline: auto;
+}
+
+#why > .container > .row:first-child .eyebrow,
+#amenities > .container > .row:first-child .eyebrow,
+#gallery > .container > .row:first-child .eyebrow,
+#contact > .container > .row:first-child .eyebrow {
+  justify-content: center;
+}
+
+#amenities > .container > .row:first-child .lead-copy,
+#gallery > .container > .row:first-child .lead-copy,
+#contact > .container > .row:first-child .lead-copy {
+  margin-inline: auto;
 }
 
 .lead-copy {
@@ -979,7 +1008,10 @@ h3,
 
 .site-footer h2,
 .site-footer strong {
+  display: inline-block;
   color: #9fd4ee;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.35rem;
 }
 
 .site-footer a {
@@ -992,9 +1024,12 @@ h3,
 }
 
 .footer-brand {
+  display: inline-block;
   font-family: var(--serif);
   font-size: 1.8rem;
   color: #9fd4ee;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.35rem;
   margin-bottom: 0.3rem;
 }
 
