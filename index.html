@@ -138,44 +138,58 @@
     </div>
   </section>
 
-  <section class="amenities section-pad has-corners corner-tl corner-br" id="amenities">
+  <section class="amenities section-pad" id="amenities">
+    <div class="amenities-deco amenities-deco--arches" aria-hidden="true"></div>
     <div class="container">
-      <div class="row mb-4 mb-lg-5 reveal">
-        <div class="col-lg-8">
+      <div class="amenities-layout">
+        <div class="amenities-intro reveal">
           <p class="eyebrow">Facilities and Amenities</p>
-          <h2 class="section-title">Outdoor lawns. Indoor rooms. One neighbourhood.</h2>
+          <h2 class="section-title">Spaces for<br><span class="title-accent">Every Lifestyle</span></h2>
           <p class="lead-copy">Madhavam keeps recreation, play, and gathering inside the community — from a jogging lawn to a hall that can host a hundred people.</p>
+          <figure class="amenities-visual" id="amenitiesVisual" aria-label="Sales office concept images">
+            <img class="amenities-slide is-active" src="assets/sales-office/01.png" alt="Sales office concept views for Madhavam">
+            <img class="amenities-slide" src="assets/sales-office/02.png" alt="" aria-hidden="true">
+          </figure>
         </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-6 reveal" style="--reveal-delay: 80ms">
-          <div class="amenity-panel">
-            <p class="panel-kicker mb-1">Outdoor</p>
-            <h3>Open air</h3>
-            <ol class="amenity-list">
-              <li><span class="num">1</span><span>Lush Green Lawn with Jogging Track</span></li>
-              <li><span class="num">2</span><span>Kids Play Area</span></li>
-              <li><span class="num">3</span><span>Park Gazebo</span></li>
-              <li><span class="num">4</span><span>Sculpture Platform</span></li>
-              <li><span class="num">5</span><span>Badminton Court</span></li>
-              <li><span class="num">6</span><span>Cricket Net Practice</span></li>
-              <li><span class="num">7</span><span>Yoga Lawn</span></li>
-              <li><span class="num">8</span><span>Flower Garden</span></li>
-              <li><span class="num">9</span><span>Pet Park</span></li>
-            </ol>
+
+        <div class="amenities-lists reveal" style="--reveal-delay: 120ms">
+          <div class="amenity-group">
+            <div class="amenity-group-head">
+              <svg class="amenity-icon" viewBox="0 0 32 24" aria-hidden="true" focusable="false">
+                <path d="M6 18 L10 6 L14 18 Z M5.5 18 H14.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M14 18 L18.5 5 L23 18 Z M13.5 18 H23.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M20 18 L23.5 9 L27 18 Z M19.5 18 H27.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+              <h3>Outdoor</h3>
+            </div>
+            <ul class="amenity-list">
+              <li class="is-active"><span class="num">01</span><span class="label">Lush Green Lawn with Jogging Track</span></li>
+              <li><span class="num">02</span><span class="label">Kids Play Area</span></li>
+              <li><span class="num">03</span><span class="label">Park Gazebo</span></li>
+              <li><span class="num">04</span><span class="label">Sculpture Platform</span></li>
+              <li><span class="num">05</span><span class="label">Badminton Court</span></li>
+              <li><span class="num">06</span><span class="label">Cricket Net Practice</span></li>
+              <li><span class="num">07</span><span class="label">Yoga Lawn</span></li>
+              <li><span class="num">08</span><span class="label">Flower Garden</span></li>
+              <li><span class="num">09</span><span class="label">Pet Park</span></li>
+            </ul>
           </div>
-        </div>
-        <div class="col-lg-6 reveal" style="--reveal-delay: 160ms">
-          <div class="amenity-panel">
-            <p class="panel-kicker mb-1">Indoor</p>
-            <h3>Under one roof</h3>
-            <ol class="amenity-list">
-              <li><span class="num">1</span><span>Multi Purpose Hall (100 pp gathering) with dedicated Pantry</span></li>
-              <li><span class="num">2</span><span>Gymnasium</span></li>
-              <li><span class="num">3</span><span>Yoga and Zumba Room</span></li>
-              <li><span class="num">4</span><span>Indoor Games Room</span></li>
-              <li><span class="num">5</span><span>Toddler Play Area</span></li>
-            </ol>
+
+          <div class="amenity-group">
+            <div class="amenity-group-head">
+              <svg class="amenity-icon" viewBox="0 0 28 24" aria-hidden="true" focusable="false">
+                <path d="M4 12 L14 4 L24 12 V21 H4 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M11 21 V14 H17 V21" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+              <h3>Indoor</h3>
+            </div>
+            <ul class="amenity-list">
+              <li><span class="num">01</span><span class="label">Multi Purpose Hall (100 pp gathering) with dedicated Pantry</span></li>
+              <li><span class="num">02</span><span class="label">Gymnasium</span></li>
+              <li><span class="num">03</span><span class="label">Yoga and Zumba Room</span></li>
+              <li><span class="num">04</span><span class="label">Indoor Games Room</span></li>
+              <li><span class="num">05</span><span class="label">Toddler Play Area</span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -545,6 +559,41 @@
         if (instance && collapse.classList.contains("show")) instance.hide();
       });
     });
+
+    const amenityItems = document.querySelectorAll(".amenity-list li");
+    amenityItems.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        amenityItems.forEach((node) => node.classList.remove("is-active"));
+        item.classList.add("is-active");
+      });
+    });
+
+    const amenitiesVisual = document.getElementById("amenitiesVisual");
+    if (amenitiesVisual) {
+      const salesOfficeSlides = Array.from({ length: 19 }, (_, i) =>
+        `assets/sales-office/${String(i + 1).padStart(2, "0")}.png`
+      );
+      const slideImgs = amenitiesVisual.querySelectorAll(".amenities-slide");
+      let slideIndex = 0;
+      let showing = 0;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      salesOfficeSlides.forEach((src) => {
+        const preload = new Image();
+        preload.src = src;
+      });
+
+      if (!reduceMotion && slideImgs.length === 2) {
+        setInterval(() => {
+          slideIndex = (slideIndex + 1) % salesOfficeSlides.length;
+          const next = 1 - showing;
+          slideImgs[next].src = salesOfficeSlides[slideIndex];
+          slideImgs[next].classList.add("is-active");
+          slideImgs[showing].classList.remove("is-active");
+          showing = next;
+        }, 3200);
+      }
+    }
 
     const enquiryForm = document.getElementById("enquiryForm");
     const fullNameInput = document.getElementById("fullName");
